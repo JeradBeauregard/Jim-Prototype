@@ -1,0 +1,55 @@
+
+
+/* ------------- EXERCISE CARD --------------*/
+
+/* Search wrapper styles */
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Search input styles */
+.search-wrapper input[type="text"] {
+  width: 100%;
+  padding: 10px 36px 10px 10px; /* padding-right now for icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* SVG icon styles */
+.search-wrapper .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  color: #444;
+  pointer-events: none;
+width: 20px;
+  height: 20px;
+  
+}
+
+.exercise-details {
+  margin-top: 10px;
+  padding: 0;
+}
+
+.exercise-details .detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+ 
+}
+
+.exercise-details dt,
+.exercise-details dd {
+  margin: 0;
+  font-size: 14px;
+}
+
+
