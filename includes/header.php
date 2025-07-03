@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/jim-prototype/public/assets/css/header.css">
 <header id="header_container">
     <div id="logo_container">
         <a href="/" class="logo">Jim</a>

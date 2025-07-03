@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/jim-prototype/public/assets/css/routinebuilder.css">
 <div id="routine_builder_card_container">
     <section id="routine_builder_exercise_card_container">
         <div id="exercise_card_header_container">
