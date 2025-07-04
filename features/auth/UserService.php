@@ -19,3 +19,5 @@ function getUser($pdo, $email) {
     $user = $statement->fetch(PDO::FETCH_ASSOC); // fetch assoc array of user 
     return $user;
 }
+
+?>

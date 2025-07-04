@@ -14,7 +14,7 @@
 <body>
   <?php
     include '../includes/header.php';
-    include '../features/routines/routine_builder.php';
+    include '../features/routines/RoutinesController.php';
   ?>
 </body>
 </html>
