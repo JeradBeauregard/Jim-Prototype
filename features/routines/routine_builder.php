@@ -19,6 +19,7 @@
         <div id="exercise_card_main_container">
             <article id="exercise_banner_container">
                 <div id="exercise_banner_icon_container">
+                    <img src="/jim-prototype/public/assets/images/dumbbellman.png" alt="A man lifting weights"/>
                 </div>
                 <div id="exercise_banner_info_container">
                     <div id="exercise_banner_header_container">
@@ -29,6 +30,20 @@
                     </div>
                 </div>
                 <div id="exercise_banner_add_container">
+                    <form action="" id="">
+                        <input type="hidden" value="">
+                        <button type="submit">+</button>
+                    </form>
+                </div>
+                <div id="exercise_banner_dropdown_icon_container">
+                    <form action="" id="">
+                        <input type="hidden" value="">
+                        <button type="submit">
+                            <svg width="40" height="24" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0l5 6 5-6H0z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
                 <div id="exercise_banner_dropdown_container">
                     <div id="exercise_banner_dropdown_favourite_container">

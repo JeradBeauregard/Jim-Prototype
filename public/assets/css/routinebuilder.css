@@ -35,6 +35,7 @@ align-items: center;
 #exercise_card_header_container{
   width: 635px;
   height: auto;
+  margin-bottom: 20px;
 
   display: flex;
   flex-direction: column;
@@ -64,7 +65,7 @@ line-height: normal;
 }
 
 #exercise_card_header_underline_container{
-  width: 633px;
+width: 633px;
 height: 5px;
 flex-shrink: 0;
 background: #FFE731;
@@ -119,6 +120,126 @@ width: 20px;
 .exercise-details dd {
   margin: 0;
   font-size: 14px;
+}
+
+/*--Exercise banner--*/
+
+#exercise_banner_container{
+
+  width: 632px;
+  height: 90px;
+  border-radius: 15px;
+  border: 1px solid #D7D7D7;
+  background: #FFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#exercise_banner_icon_container{
+
+  width: 112px;
+  height: 90px;
+  border-radius: 14px 0px 0px 14px;
+  background-color: #FFE731;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#exercise_banner_icon_container img{
+  height: 70px;
+  width: 70px;
+}
+
+#exercise_banner_info_container{
+
+  height: 90px;
+  width: 325px;
+  padding-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+
+
+}
+
+  #exercise_banner_header_container h3{
+
+    color: #000;
+    font-family: Arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  #exercise_banner_details_container p{
+    color: #000;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin: 0;
+    padding: 0;
+
+  }
+
+#exercise_banner_add_container{
+
+  height: 90px;
+  width: 80px;
+
+}
+
+  #exercise_banner_add_container button{
+    border: none;
+    height: 90px;
+    width: 89px;
+    background: none;
+    background-color: none;
+    font-size: 80px;
+
+  }
+
+#exercise_banner_dropdown_icon_container{ /*icon*/
+
+height: 90px;
+width: 90px;
+
+border-radius: 0px 14px 14px 0px;
+background-color: #D9D9D9;
+
+
+
+}
+
+  #exercise_banner_dropdown_icon_container button{
+    border: none;
+    height: 90px;
+    width: 89px;
+    background: none;
+    background-color: none;
+    
+  }
+
+
+
+
+/*-- Exercise banner dropdown --*/
+
+#exercise_banner_dropdown_container{
+  display: none;
 }
 
 
