@@ -10,6 +10,10 @@ function getAllExercises($pdo) {
 
 function getTempExercises($pdo,$temp_routine){
 
+      if (empty($temp_routine)) {
+        return []; // return empty array instead of running broken SQL
+    }
+
     $placeholders = implode(',', array_fill(0, count($temp_routine), '?'));
     $statement = $pdo->prepare("SELECT * FROM exercises WHERE id in ($placeholders)");
     $statement->execute($temp_routine);

@@ -32,7 +32,7 @@ align-items: center;
 
 /*header container*/
 
-#exercise_card_header_container{
+.exercise_card_header_container{
   width: 635px;
   height: auto;
   margin-bottom: 20px;
@@ -43,7 +43,7 @@ align-items: center;
   align-items: center;
 }
 
-#exercise_card_header_search_container{
+.exercise_card_header_search_container{
   width: 100%;
   height: 70px;
   margin-top: 40px;
@@ -54,7 +54,7 @@ align-items: center;
 
 }
 
-#exercise_card_header_search_container h2{
+.exercise_card_header_search_container h2{
 color: #000;
 font-family: Arial;
 font-size: 40px;
@@ -64,7 +64,7 @@ line-height: normal;
 
 }
 
-#exercise_card_header_underline_container{
+.exercise_card_header_underline_container{
 width: 633px;
 height: 5px;
 flex-shrink: 0;
@@ -124,7 +124,7 @@ width: 20px;
 
 /*--Exercise banner--*/
 
-#exercise_card_main_container{
+.exercise_card_main_container{
   height: 655px;
   overflow: hidden;
 
@@ -138,7 +138,25 @@ width: 20px;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
-#exercise_card_main_container::-webkit-scrollbar {
+.exercise_card_main_container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.exercise_card_main_container_short{
+  height: 580px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.exercise_card_main_container_short::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
@@ -273,4 +291,19 @@ background: #FFF;
 
 display: flex;
 flex-direction: column;
+align-items: center;
 }
+
+#routine_total_time{
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.new_routine_button_container{
+  margin-top: 15px;
+  width: 633px;
+  display: flex;
+  justify-content: flex-end;
+}
+

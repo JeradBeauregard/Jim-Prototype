@@ -3,7 +3,9 @@
 session_start();
 
 include(__DIR__ . '/../../includes/db.php');                
-include(__DIR__ . '/RoutinesService.php');                 
+include(__DIR__ . '/RoutinesService.php');     
+
+// get all exercises
 
 $exercises = getAllExercises($pdo);
 
@@ -23,6 +25,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_exercise'])){
     if(!in_array($exercise_id,$_SESSION['temp_routine'])){
         $_SESSION['temp_routine'][] = $exercise_id; // adds exercise to session array
     }
+    header("Location: /Jim-Prototype/public/routinebuilder.php"); // return to routine builder page
+    exit;
 
 }
 
