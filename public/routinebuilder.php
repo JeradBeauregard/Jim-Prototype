@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="/jim-prototype/public/assets/css/header.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="/jim-prototype/public/assets/css/routinebuilder.css?v=<?php echo time(); ?>">
-
+  <script src="/Jim-Prototype/public/assets/js/routine_builder.js"></script>
 
 
 </head>

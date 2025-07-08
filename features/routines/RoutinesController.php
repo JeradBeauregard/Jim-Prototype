@@ -30,6 +30,21 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_exercise'])){
 
 }
 
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove_exercise'])){
+
+    $exercise_id = $_POST['exercise_id'];
+
+
+    if (($key = array_search($exercise_id, $_SESSION['temp_routine'])) !== false) { // search array for id if found remove
+        unset($_SESSION['temp_routine'][$key]);
+       
+        $_SESSION['temp_routine'] = array_values($_SESSION['temp_routine']); // reindex array
+    }
+    header("Location: /Jim-Prototype/public/routinebuilder.php"); // return to routine builder page
+    exit;
+}
+
+
 $temp_routine = $_SESSION['temp_routine'];
 $temp_exercises = getTempExercises($pdo, $temp_routine);
 

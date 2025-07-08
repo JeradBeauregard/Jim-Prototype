@@ -20,7 +20,8 @@
         </div>
         <div class="exercise_card_main_container">
             <?php foreach ($exercises as $exercise): ?>
-<article class="exercise_banner_container">
+<article class="full_exercise_container">
+    <div class="exercise_banner_container">
     <div class="exercise_banner_icon_container">
         <img src="/jim-prototype/public/assets/images/dumbbellman.png" alt="A man lifting weights"/>
     </div>
@@ -44,14 +45,14 @@
     </form>
 </div>
     <div class="exercise_banner_dropdown_icon_container">
-        <form action="" method="POST">
-            <input type="hidden" name="exercise_id" value="<?= $exercise['id'] ?>">
-            <button type="submit">
-                <svg width="40" height="24" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+        
+            <button type="button" class="dropdown-toggle">
+                <svg width="40" height="24" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
                     <path d="M0 0l5 6 5-6H0z" fill="currentColor"/>
                 </svg>
             </button>
-        </form>
+        
+    </div>
     </div>
     <div class="exercise_banner_dropdown_container">
         <div class="exercise_banner_dropdown_favourite_container"></div>
@@ -87,8 +88,16 @@
     </section>
     <section id="routine_builder_new_routine_card_container">
         <div class="exercise_card_header_container">
+            <form method="POST" class="routine_name_form">
             <div class="exercise_card_header_search_container">
-                <h2>New Routine...</h2>
+                
+                    <input 
+                        type="text" 
+                        name="routine_name" 
+                        value="<?= htmlspecialchars($routine_name ?? 'New Routine') ?>" 
+                        class="routine_name_input"
+                        placeholder="New Routine"
+                    >
                 <p id="routine_total_time">34min</p> <!-- update later to grab total time from db for routine -->
             </div>
             <div class="exercise_card_header_underline_container">
@@ -113,9 +122,10 @@
         </div>
     </div>
     <div class="exercise_banner_add_container">
-        <form action="" method="POST">
+        <form action="/Jim-Prototype/features/routines/RoutinesController.php" method="POST">
+            <input type="hidden" name="remove_exercise" value="1">
             <input type="hidden" name="exercise_id" value="<?= $exercise['id'] ?>">
-            <button type="submit">+</button>
+            <button type="submit">&#8722;</button>
         </form>
     </div>
     <div class="exercise_banner_dropdown_icon_container" >

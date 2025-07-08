@@ -246,6 +246,10 @@ width: 20px;
     background-color: none;
     font-size: 80px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
 .exercise_banner_dropdown_icon_container{ /*icon*/
@@ -270,16 +274,63 @@ background-color: #D9D9D9;
   }
 
 
-
+.full_exercise_banner_container{
+  width: 632px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
 
 /*-- Exercise banner dropdown --*/
 
-.exercise_banner_dropdown_container{
-  display: none;
+.exercise_banner_dropdown_container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  opacity: 0;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+
+.exercise_banner_dropdown_container.open {
+  max-height: 500px; /* adjust based on content size */
+  opacity: 1;
+  padding: 1rem;
+  pointer-events: auto;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.open .dropdown-arrow {
+  transform: rotateX(180deg);
 }
 
 
+
 /*------------ NEW ROUTINE CARD ---------*/
+
+.routine_name_input {
+    font-size: 2rem; /* match your h2 styling */
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    color: inherit;
+    width: 200px;
+    outline: none;
+    padding: 0;
+    margin-bottom: 1rem; /* or adjust as needed */
+}
+
+.routine_name_input::placeholder {
+    color: #aaa;
+}
+
+.routine_name_input:focus {
+    border-bottom: 2px solid #facc15; /* subtle underline on focus, optional */
+}
+
 
 #routine_builder_new_routine_card_container{
   width: 708px;
