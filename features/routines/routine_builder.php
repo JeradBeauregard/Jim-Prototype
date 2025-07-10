@@ -105,7 +105,8 @@
             </div>
                  <div class="exercise_card_main_container_short">
             <?php foreach ($temp_exercises as $exercise): ?>
-<article class="exercise_banner_container">
+<article class="full_exercise_container">
+    <div class="exercise_banner_container">
     <div class="exercise_banner_icon_container">
         <img src="/jim-prototype/public/assets/images/dumbbellman.png" alt="A man lifting weights"/>
     </div>
@@ -121,22 +122,22 @@
             </p>
         </div>
     </div>
-    <div class="exercise_banner_add_container">
-        <form action="/Jim-Prototype/features/routines/RoutinesController.php" method="POST">
-            <input type="hidden" name="remove_exercise" value="1">
-            <input type="hidden" name="exercise_id" value="<?= $exercise['id'] ?>">
-            <button type="submit">&#8722;</button>
-        </form>
-    </div>
-    <div class="exercise_banner_dropdown_icon_container" >
-        <form action="" method="POST">
-            <input type="hidden" name="exercise_id" value="<?= $exercise['id'] ?>">
-            <button type="submit">
-                <svg width="40" height="24" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+   <div class="exercise_banner_add_container">
+    <form action="/Jim-Prototype/features/routines/RoutinesController.php" method="POST">
+        <input type="hidden" name="remove_exercise" value="1">
+        <input type="hidden" name="exercise_id" value="<?= $exercise['id'] ?>">
+        <button type="submit">&#8722;</button>
+    </form>
+</div>
+    <div class="exercise_banner_dropdown_icon_container">
+        
+            <button type="button" class="dropdown-toggle">
+                <svg width="40" height="24" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
                     <path d="M0 0l5 6 5-6H0z" fill="currentColor"/>
                 </svg>
             </button>
-        </form>
+        
+    </div>
     </div>
     <div class="exercise_banner_dropdown_container">
         <div class="exercise_banner_dropdown_favourite_container"></div>
